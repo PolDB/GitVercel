@@ -7,7 +7,11 @@ const PORT = 3001;
 const cors = require("cors");
 const axios = require("axios");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://git-vercel-zeta.vercel.app/",
+  })
+);
 app.use(express.json());
 
 // Route pour récupérer toutes les tâches
